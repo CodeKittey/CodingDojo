@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Onwerk - Coding-Dojo</title>
+    <link rel="icon"
+      type="image/png"
+      href="images/ow_logo.png">
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Martina Kraus">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h1>Coding-Dojo</h1>
+            <img src="images/panda.jpg">
+        </section>
+        <section>
+            <section>
+                <h1>Prinzipien</h1>
+            </section>
+            <section>
+                <h2>Kein Wettkampf!!!!!!</h2>
+                <img src="images/kittycatfight.jpg">
+            </section>
+            <section>
+                <h2>Zusammen: Pair programming</h2>
+                <img src="images/catcuddle4.jpg">
+            </section>
+            <section>
+                <h2>Continuous Learning</h2>
+                <h2>Fail early, fail often</h2>
+                <h2>No troll, no show!</h2>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Format</h1>
+            </section>
+            <section>
+                <h2>Code Kata</h2>
+                <ul>
+                  <li>Mehrere Entwickler,</li>
+                  <li>Zwei Sprachen,</li>
+                  <li>EINE Tastatur</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Agenda</h2>
+                <ul>
+                  <li>10 Minuten: Aufgaben Vorstellung</li>
+                  <li>~60 Minuten: Coding</li>
+                  <li>~30 Minuten: Besprechung/ Retrospektive</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+          <section>
+              <h2>Die Aufgabe:</h2>
+              <div>
+                Implementiere eine Web-API (REST-Service) mit folgenden Schnittstellen: <br>
+                <ul>
+                  <li><strong>GET</strong> /onwerkstaff</li>
+                  <li><strong>GET</strong> /onwerkstaff/:employeeId</li>
+                  <li><strong>PUT</strong> /onwerkstaff</li>
+                </ul>
+              </div>
+          </section>
+          <section>
+              <h2>GET /onwerkstaff</h2>
+              <div>
+                Liefert ein JSON-Array:
+                <pre>
+                  [
+                    {
+                      "name" : "Mehl",
+                      "prename" : "Jan",
+                      "codinglanguages" : ["php", "C#", ...]
+                    },
+                    ....
+                  ]
+                </pre>
+              </div>
+          </section>
+          <section>
+              <h2>GET /onwerkstaff/:employeeId</h2>
+              <div>
+                Liefert ein JSON-Objekt:
+                <pre>
+                    {
+                      "name" : "Unicorn",
+                      "prename" : "Jens",
+                      "codinglanguages" : ["C++", "C#", ...]
+                    }
+                </pre>
+              </div>
+          </section>
+          <section>
+              <h2>PUT /onwerkstaff</h2>
+              <div>
+                Sendet ein JSON-Objekt an den Server: <br>
+                Man erhaelt eine Id als Antwort.
+                <pre>
+                  body.employee
+
+                    {
+                      "name" : "Kittykat",
+                      "prename" : "Martina",
+                      "codinglanguages" : ["JavaScript", "C++", ...]
+                    }
+                </pre>
+              </div>
+          </section>
+        </section>
+        <section>
+            <h2>Make Decisions</h2>
+            <ul>
+              <li>Welche Technologien?</li>
+              <li>Konzept?</li>
+              <li>TDD!!!!!</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Happy Coding!!!!</h2>
+            <img src="images/codingcat.jpg">
+        </section>
+           </div>
+
+</div>
+
+       <script src="lib/js/head.min.js"></script>
+       <script src="js/reveal.js"></script>
+
+       <script>
+           // Full list of configuration options available at:
+           // https://github.com/hakimel/reveal.js#configuration
+           Reveal.initialize({
+               controls: true,
+               progress: true,
+               history: true,
+               center: true,
+               transition: 'slide', // none/fade/slide/convex/concave/zoom
+               // Optional reveal.js plugins
+               dependencies: [
+                   { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                   { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                   { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                   { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                   { src: 'plugin/zoom-js/zoom.js', async: true },
+                   { src: 'plugin/notes/notes.js', async: true }
+               ]
+           });
+       </script>
+
+       </body>
+       </html>
